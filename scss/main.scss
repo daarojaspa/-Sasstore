@@ -1,0 +1,209 @@
+//variables
+$first-color:#FFEfe7;
+$second-color:#FfDac7;
+$third-color:#BABDBD;
+$fourd-color:#fa9500;
+$text-color:#7c6a0a;
+$font-stack:"IBM Plex Sans", sans-serif;
+$text-size:1rem;
+$title-size:1.8rem;
+//____________________________________________________________
+//MIxINS
+@mixin flexCenter($direction,$content,$align){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $content;
+  align-items: $align;
+}
+@mixin buttonStyle{
+  background: none;
+  border-style: none;
+}
+//__________________________________________________
+*{box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  padding: 5px;
+  margin: 0px;
+  font-family: $font-stack;
+  background-color: $first-color;
+}
+.navbar{
+  background-color: $first-color;
+  width: auto;
+  min-height: 150px;
+  padding: 1px;
+  @include flexCenter(row,space-between , center );
+  p{
+    font-size: 1.5rem;
+    padding-left: 30px;
+    color: $text-color;
+  }
+  .icons{
+    display: flex;
+    gap:10px;
+    button{
+      @include buttonStyle(); 
+  }
+  }
+}
+.main{
+  article{
+    color: $text-color;
+    @include flexCenter(row,space-between ,center );
+    .infoSection{
+      margin: 10px;
+      padding: 15px;
+    text-align: left;
+    width: 40%;
+      h2{
+        font-size: $title-size;
+      }
+      p{
+        font-size: $text-size;
+        padding: 5px;
+      }
+      @include buttonStyle();
+      button{
+        background: $fourd-color;
+        border: solid black;
+        padding: 8px;
+        border-radius: 8px;
+        font-size: $text-size;
+        color: $second-color;
+      }
+  }
+    .graphicSection{
+      width: 35vw;
+      margin: 10px;
+      height: 100vh;
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 24px;
+      }
+    }
+  }
+}
+  section{
+    height: auto;
+    background-color: $first-color;
+    padding: 24px;
+  
+  h2{
+    color: $text-color;
+    font-size: $title-size;
+  }
+  .healthcare{
+    margin: 0px;
+    h2{
+      font-weight:900;
+    padding-bottom: 30px;
+  }
+    
+    .cardSection{
+      @include flexCenter(row,space-evenly ,flex-start );
+      flex-wrap: wrap;
+      margin: 0px;
+    }
+    .card{
+      color: $text-color;
+      width: 10rem;
+      height: auto;
+      border-radius: 8px;
+      background-color: $second-color;
+      padding: 4px;
+      margin-bottom: 8px;
+      margin-top: 8px;
+      .icon{
+        @include flexCenter(row,flex-end ,flex-end );
+      }
+      .card__image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-justify: left;
+      }
+      img{
+        background-image: cover;
+        width:8rem;
+        padding: 4px;
+        border-radius: 8px;
+      }
+    }
+  }
+  .furniture{
+    @extend .healthcare;
+  .card{ background-color: $third-color;
+    
+    }
+  }
+}
+
+.aboutUs{
+  &__mision{
+    background-color: $fourd-color;
+    @include flexCenter(row,space-evenly ,center );
+    div{
+      margin:20px;
+      display:flex;
+    }
+    img{
+      margin: 4px;
+      padding: 4px;
+      width: 6rem;
+      height: 6rem;
+      align-self: center;
+      justify-self: center;
+
+    }
+    p{
+      text-align: start;
+      padding: 8px;
+      margin: 16px;
+    }
+  }
+}
+.gallery{
+  @include flexCenter(row,space-evenly ,center );
+  margin: 30px;
+  img{
+    width: 13rem;
+    height: 16rem;
+    margin-top: 15px;
+    border-radius: 10%;
+    &:hover{
+      scale: 1.2;
+    }
+  }
+}
+.location{
+  color: $text-color;
+  h2{ padding:10px;}
+  address{   @include flexCenter(row,center ,center );}
+  .map{
+    @include flexCenter(row,center ,center );
+    padding-bottom:30px;
+    width: 100px;
+  }
+}
+.footer{
+  display: block;
+  background-color: $fourd-color;
+  height: 300px;
+  width: 100%;
+  padding: 30px;
+  .infolinks{
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 1fr  1fr
+  }
+  .socialMedia{
+    @include flexCenter(row, center,center );
+    gap:50px;
+    padding: 30px;
+    margin-top: 50px ;
+  }
+}

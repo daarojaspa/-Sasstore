@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 5px;
+  margin: 0px;
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #FFEfe7;
+}
+
+.navbar {
+  background-color: #FFEfe7;
+  width: auto;
+  min-height: 150px;
+  padding: 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar p {
+  font-size: 1.5rem;
+  padding-left: 30px;
+  color: #7c6a0a;
+}
+.navbar .icons {
+  display: flex;
+  gap: 10px;
+}
+.navbar .icons button {
+  background: none;
+  border-style: none;
+}
+
+.main article {
+  color: #7c6a0a;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main article .infoSection {
+  margin: 10px;
+  padding: 15px;
+  text-align: left;
+  width: 40%;
+  background: none;
+  border-style: none;
+}
+.main article .infoSection h2 {
+  font-size: 1.8rem;
+}
+.main article .infoSection p {
+  font-size: 1rem;
+  padding: 5px;
+}
+.main article .infoSection button {
+  background: #fa9500;
+  border: solid black;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #FfDac7;
+}
+.main article .graphicSection {
+  width: 35vw;
+  margin: 10px;
+  height: 100vh;
+}
+.main article .graphicSection img {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+}
+
+section {
+  height: auto;
+  background-color: #FFEfe7;
+  padding: 24px;
+}
+section h2 {
+  color: #7c6a0a;
+  font-size: 1.8rem;
+}
+section .healthcare, section .furniture {
+  margin: 0px;
+}
+section .healthcare h2, section .furniture h2 {
+  font-weight: 900;
+  padding-bottom: 30px;
+}
+section .healthcare .cardSection, section .furniture .cardSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0px;
+}
+section .healthcare .card, section .furniture .card {
+  color: #7c6a0a;
+  width: 10rem;
+  height: auto;
+  border-radius: 8px;
+  background-color: #FfDac7;
+  padding: 4px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+section .healthcare .card .icon, section .furniture .card .icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+section .healthcare .card .card__image, section .furniture .card .card__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-justify: left;
+}
+section .healthcare .card img, section .furniture .card img {
+  background-image: cover;
+  width: 8rem;
+  padding: 4px;
+  border-radius: 8px;
+}
+section .furniture .card {
+  background-color: #BABDBD;
+}
+
+.aboutUs__mision {
+  background-color: #fa9500;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.aboutUs__mision div {
+  margin: 20px;
+  display: flex;
+}
+.aboutUs__mision img {
+  margin: 4px;
+  padding: 4px;
+  width: 6rem;
+  height: 6rem;
+  align-self: center;
+  justify-self: center;
+}
+.aboutUs__mision p {
+  text-align: start;
+  padding: 8px;
+  margin: 16px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px;
+}
+.gallery img {
+  width: 13rem;
+  height: 16rem;
+  margin-top: 15px;
+  border-radius: 10%;
+}
+.gallery img:hover {
+  scale: 1.2;
+}
+
+.location {
+  color: #7c6a0a;
+}
+.location h2 {
+  padding: 10px;
+}
+.location address {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.location .map {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  width: 100px;
+}
+
+.footer {
+  display: block;
+  background-color: #fa9500;
+  height: 300px;
+  width: 100%;
+  padding: 30px;
+}
+.footer .infolinks {
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.footer .socialMedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 30px;
+  margin-top: 50px;
+}/*# sourceMappingURL=main.css.map */
